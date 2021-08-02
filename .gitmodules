@@ -1,0 +1,3 @@
+[submodule "nginx/www/themes/terminal"]
+	path = nginx/www/themes/terminal
+	url = https://github.com/panr/hugo-theme-terminal.git
