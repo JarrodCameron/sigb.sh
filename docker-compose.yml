@@ -4,12 +4,4 @@ services:
     build: ./nginx
     ports:
       - "80:80"
-
-  www:
-    hostname: www.sigb.sh
-    build: ./www
-    volumes:
-      - "./www:/www"
-    ports:
-      - "8000:8000"
-
+      - "443:443"
