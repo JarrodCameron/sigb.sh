@@ -20,7 +20,7 @@ docker-compose up --build
 
 ## TODO
 
-[x] Setup HTTPS
-[x] Links should redirect to `sigb.sh`, not `localhost:8000`
-[x] Port 80 should redirect to port 443
-[ ] Finish https://httpsiseasy.com/ video #4
+- [x] Setup HTTPS
+- [x] Links should redirect to `sigb.sh`, not `localhost:8000`
+- [x] Port 80 should redirect to port 443
+- [ ] Finish https://httpsiseasy.com/ video #4
