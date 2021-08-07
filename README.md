@@ -1,9 +1,11 @@
 # sigb.sh
 
-## Tools
+## Prerequisites
 
+```sh
 apt update
 apt install -y docker-compose
+```
 
 ## Getting Starting
 
@@ -14,7 +16,9 @@ git clone --recurse-submodules 'https://github.com/JarrodCameron/sigb.sh'
 cd sigb.sh
 
 # Generate the HTTPS keys for debugging
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout nginx/ssl/www.key -out nginx/ssl/www.crt
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -subj '/C=AU/ST=New South Wales/L=Sydney/O=Signal 11/CN=sigb.sh' -keyout nginx/ssl/www.pem -out nginx/ssl/www.pem
+
+# Start up server
 docker-compose up --build
 ```
 
@@ -23,4 +27,6 @@ docker-compose up --build
 - [x] Setup HTTPS
 - [x] Links should redirect to `sigb.sh`, not `localhost:8000`
 - [x] Port 80 should redirect to port 443
-- [ ] Finish https://httpsiseasy.com/ video #4
+- [x] Finish https://httpsiseasy.com/ video #4
+- [ ] Seperate docker container (one for HTTPS server and one for hugo site)
+- [ ] `systemd` unit to automate git updates
